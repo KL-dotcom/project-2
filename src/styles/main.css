@@ -1,0 +1,215 @@
+Body {
+  background-color: #beebe9;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
+.homepage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.homepage-text {
+  padding: 0 25px;
+  color: #333333;
+}
+
+.homepage-text h2 {
+  color: #2a7886;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.homepage-text p {
+  line-height: 1.6;
+  margin: 0 100px;
+}
+
+button {
+  background-color: white;
+  border: 2px solid #8ac6d1;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  margin: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-board {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-board h3 {
+  color: #333333;
+  font-weight: normal;
+}
+
+.result-book h3 {
+  color: #333333;
+  font-weight: normal;
+  max-height: 200px;
+}
+
+.results-board h4 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2a7886;
+  margin-bottom: 5px;
+}
+
+.result-first, .result-second {
+  display: flex;
+  justify-content: center;
+  max-height: 500px;
+  align-items: flex-start;
+}
+
+.separator {
+  height: 50px;
+  width: 100%;
+}
+
+.result-drink h4, .result-movie h4, .result-book h4, .result-tweet h4 {
+  margin-bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+.result-drink, .result-movie, .result-book, .result-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  line-height: 1.4;
+}
+
+.result-drink img, .result-movie img, .result-book img {
+  border: 5px solid #8ac6d1;
+}
+
+.result-book img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+  max-height: 300px;
+}
+
+.result-drink img {
+  width: auto;
+  height: 100%;
+  margin-bottom: 10px;
+  max-height: 300px;
+}
+
+.result-movie img {
+  width: auto;
+  height: 100%;
+  margin-bottom: 10px;
+  max-height: 300px;
+}
+
+.result-text {
+  width: 70%;
+}
+
+.result-book h2 {
+  width: 60%;
+  height: auto;
+  text-align: center;
+}
+
+.result-book h3 {
+  margin: 0 -50px;
+}
+
+.result-drink h3 {
+  margin: 0 -40px;
+}
+
+.result-tweet {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.result-tweet p {
+  background-color: white;
+  padding: 20px;
+  border: 5px solid #8ac6d1;
+}
+
+.result-tweet span {
+  color: rgb(4, 151, 214);
+}
+
+.errorpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorpage h2 {
+  text-align: center;
+  color: #2a7886;
+}
+
+.errorpage button {
+  width: 225px;
+}
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-items {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  width: 250px;
+  height: 30px;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+input {
+  width: 250px;
+  height: 27px;
+  font-size: 16px;
+}
+
+.form-page button {
+  width: 200px;
+}
