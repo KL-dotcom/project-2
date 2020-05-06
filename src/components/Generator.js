@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import Form from '../components/Form'
 import Result from '../components/Result'
-
 class Generator extends React.Component {
 
   state = {
@@ -28,19 +27,19 @@ class Generator extends React.Component {
       const resCocktails = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.selectedSpirit}`)
       this.setState({ allCocktails: resCocktails.data })
 
-      const resMovies = await axios.get(`http://www.omdbapi.com/?s=${this.state.movieWord}&apikey=21bb5b6c`)
+      const resMovies = await axios.get(`http://www.omdbapi.com/?s=${this.state.movieWord}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
       this.setState({ allMovies: resMovies.data })
 
-      const resBooks = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${this.state.movieWord}&key=AIzaSyCScg4gVkYgMBbiT570cWxN7mc8zGgGwmg`)
+      const resBooks = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${this.state.movieWord}&key=${process.env.REACT_APP_BOOK_ONE}`)
       this.setState({ allBooks: resBooks.data })
-  
+
 
       this.getSingleCocktail()
       this.getSingleMovie()
       this.getSingleBook()
-this.getHashtag()
-   const isHidden = false
-    this.setState({ isHidden })
+      this.getHashtag()
+      const isHidden = false
+      this.setState({ isHidden })
     } catch (err) {
       this.props.history.push('./error')
     }
@@ -49,7 +48,7 @@ this.getHashtag()
   getHashtag = async () => {
     const resHashtag = await axios.get(`https://api.datamuse.com/words?rel_trg=${this.state.movieWord}`)
     this.setState({ hashtags: resHashtag.data })
-}
+  }
 
 
 
@@ -88,7 +87,7 @@ this.getHashtag()
   }
 
   resMovieId = async () => {
-    const resMovieId = await axios.get(`http://www.omdbapi.com/?i=${this.state.singleMovie.imdbID}&apikey=21bb5b6c`)
+    const resMovieId = await axios.get(`http://www.omdbapi.com/?i=${this.state.singleMovie.imdbID}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
     this.setState({ movieInfo: resMovieId.data })
 
 
@@ -96,8 +95,8 @@ this.getHashtag()
 
 
   getSingleBook = () => {
-    const singleBook = this.state.allBooks.items[Math.floor(Math.random() * this.state.allBooks.items.length)] 
-    
+    const singleBook = this.state.allBooks.items[Math.floor(Math.random() * this.state.allBooks.items.length)]
+
     this.setState({ singleBook })
   }
 
@@ -110,19 +109,19 @@ this.getHashtag()
   render() {
     return (
       <>
-      <div className="main">
-      <h1>Curate My Night</h1>
-        <Form className="form"
-          handleSelect={this.handleSelect}
-          handleInput={this.handleInput}
-          updateInfo={this.state}
-          handleClick={this.handleClick}
-        />
+        <div className="main">
+          <h1>Curate My Night</h1>
+          <Form className="form"
+            handleSelect={this.handleSelect}
+            handleInput={this.handleInput}
+            updateInfo={this.state}
+            handleClick={this.handleClick}
+          />
 
-        <Result className="result-all"
-          updateInfo={this.state}
-        />
-      </div>
+          <Result className="result-all"
+            updateInfo={this.state}
+          />
+        </div>
       </>
 
     )
