@@ -18,7 +18,7 @@ class Generator extends React.Component {
     singleBook: null,
     tweets: ['Best book ever! Check this one out!', 'Great evening with an even greater book', 'Love to read, reading is life!', 'This is on my must-read list guys', 'Time to unwind with a good book!', 'That feeling when a book changes your life :)'],
     hashtags: null,
-    readingHashtags: ['#readingisliving', '#bibliophile', '#fuckwithbrains', '#quarantinereading', '#bookaddict', '#ireadanything', '#epicreads', '#booknerds', '#bookworm', '#bookhoarder', '#currentlyreading', '#bibliobeauty', '#readathon', '#bookaholic', '#bookobsession'],
+    readingHashtags: ['#readingisliving', '#bibliophile', '#quarantinereading', '#bookaddict', '#ireadanything', '#epicreads', '#booknerds', '#bookworm', '#bookhoarder', '#currentlyreading', '#bibliobeauty', '#readathon', '#bookaholic', '#bookobsession'],
     isHidden: true
   }
 
@@ -27,7 +27,7 @@ class Generator extends React.Component {
       const resCocktails = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${this.state.selectedSpirit}`)
       this.setState({ allCocktails: resCocktails.data })
 
-      const resMovies = await axios.get(`http://www.omdbapi.com/?s=${this.state.movieWord}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
+      const resMovies = await axios.get(`https://www.omdbapi.com/?s=${this.state.movieWord}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
       this.setState({ allMovies: resMovies.data })
 
       const resBooks = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${this.state.movieWord}&key=${process.env.REACT_APP_BOOK_ONE}`)
@@ -87,7 +87,7 @@ class Generator extends React.Component {
   }
 
   resMovieId = async () => {
-    const resMovieId = await axios.get(`http://www.omdbapi.com/?i=${this.state.singleMovie.imdbID}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
+    const resMovieId = await axios.get(`https://www.omdbapi.com/?i=${this.state.singleMovie.imdbID}&apikey=${process.env.REACT_APP_MOVIE_ONE}`)
     this.setState({ movieInfo: resMovieId.data })
 
 
@@ -106,6 +106,10 @@ class Generator extends React.Component {
     </div>
   }
 
+  getRandom = () => {
+    return Math.floor(Math.random() * this.state.tweets.length)
+  }
+
   render() {
     return (
       <>
@@ -120,6 +124,7 @@ class Generator extends React.Component {
 
           <Result className="result-all"
             updateInfo={this.state}
+            getRandom={this.getRandom}
           />
         </div>
       </>

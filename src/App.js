@@ -14,11 +14,12 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/generator" component={Generator} />
-        <Route path="/error" component={Error} />
         <Route path="/result" component={Result} />
+        <Route path="/error" component={Error} />
+
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

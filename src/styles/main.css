@@ -1,4 +1,4 @@
-Body {
+body {
   background-color: #beebe9;
 }
 
@@ -34,7 +34,6 @@ h1 {
 .homepage-text h2 {
   color: #2a7886;
   font-family: 'Roboto Mono', monospace;
-
 }
 
 .homepage-text p {
@@ -138,6 +137,7 @@ button {
 
 .result-text {
   width: 70%;
+  margin-bottom: 30px;
 }
 
 .result-book h2 {
