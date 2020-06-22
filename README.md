@@ -12,17 +12,7 @@ This was a Hackathon project completed in 2 days.
 
 ## Technologies Used
 
-SCSS, React JS, Yarn, Axios
-
-## Key Learnings
-
-Managing nested da
-
-## Challenges and future improvements
-
-Managing the data received from the different APIs via asynchronous calls and using the nested data.
-
-
+SCSS, React JS, Express JS, Yarn package manager, Axios
 
 ## Deployment 
 
