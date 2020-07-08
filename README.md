@@ -38,8 +38,8 @@ Stay Home Stay Safe is a project for helping people decide how to spend their lo
 The movie and drink the user will be recommended plus the descriptions for both:
 
 ![movie and drink example image](/assets/movie-drink.png)
-
-
+<br />
+<br />
 
 Plus the book the user can pretend to have read instead:
 
