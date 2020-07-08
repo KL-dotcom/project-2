@@ -24,7 +24,7 @@ Stay Home Stay Safe is a project for helping people decide how to spend their lo
 * In order to get the idea to work as a web application, we needed to use multiple third party APIs for all the information. The following is a list of our resources: 
     * www.thecocktaildb.com
     * www.omdbapi.com
-    * developers.google.com/books
+    * https://developers.google.com/books
     * www.datamuse.com/api
 
 * My partner and I worked collaboratively by pair coding using VSCode Live Share. This worked well, as we could easily communicate and solve bugs together.
