@@ -74,3 +74,10 @@ In completing this project, I felt like my understanding of how data is passed b
 This project was deployed using Netlify:
 https://dreamy-hoover-1fdd87.netlify.app/
 
+
+## Bugs
+
+* On occasion the drink description that is rendered is too big, and spills over the book information. We somewhat fixed the bug in development, however there are still cases where this happens. As the description length can vary, from a couple of words to multiple paragraphs, we found it difficult to make the formatting work for every drink description.
+
+* The drink div and the movie div sometimes render with no space between them, we have not found the cause of this bug yet.
+
