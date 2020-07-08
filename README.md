@@ -33,15 +33,20 @@ Stay Home Stay Safe is a project for helping people decide how to spend their lo
 
 * Out of the information received, a randomised drink, movie, book are chosen and then set into state. From this the user can get the name of each of their results and a description if available along with the relevant tweet. The tweet is also composed of hashtags that are generated related to the word the user chose.
 
-##### Examples
+#### Examples
+
 The movie and drink the user will be recommended plus the descriptions for both:
+
 ![movie and drink example image](/assets/movie-drink.png)
 
 Plus the book the user can pretend to have read instead:
+
 ![book tweet example image](/assets/book-tweet.png)
 Sometimes the books will come with a description as well, however this depends on the data received from the Google Book API.
 
+
 If there is an issue with the inputs they are redirected to an error page which will give the user the option of starting over:
+
 ![error page example image](/assets/error-page.png)
 
 
