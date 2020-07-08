@@ -44,7 +44,7 @@ The movie and drink the user will be recommended plus the descriptions for both:
 Plus the book the user can pretend to have read instead:
 
 ![book tweet example image](/assets/book-tweet.png)
-Sometimes the books will come with a description as well, however this depends on the data received from the Google Book API.
+>> Sometimes the books will come with a description as well, however this depends on the data received from the Google Book API.
 <br />
 <br/>
 
